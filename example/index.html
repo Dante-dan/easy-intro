@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style/animate.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <style>
+        main {
+            margin: 100px 100px;
+        }
+    </style>
+    <script type="text/javascript"></script>
+    <meta charset="UTF-8">
+    <title>Easy-Intro</title>
+</head>
+<body>
+    <main>
+        <h1 id="step-1">Step 1</h1>
+        <h1 id="step-2">Step 2</h1>
+        <h1 id="step-3">Step 3</h1>
+        <button id="addIntro" class="shine-animate"> addIntro </button>
+        <button id="click" style="width: 20em; display: block; margin: 20px; height: 4em"> click </button>
+    </main>
+    <script src="./index.js"></script>
+    <script type="text/javascript">
+        var removeIntro = null;
+      addIntroArr([
+        {
+          el: document.getElementById('step-1'),
+          desc: 'First Step! click me!',
+          realClick: false,
+          hint: false,
+        },
+        {
+          el: document.getElementById('step-2'),
+          desc: 'Second Step! click me!',
+          realClick: false,
+          hint: false,
+        },
+        {
+          el: document.getElementById('step-3'),
+          desc: 'Third Step! click me!',
+          realClick: false,
+          hint: false,
+        }
+      ]);
+      document.getElementById('addIntro').addEventListener('click', function () {
+        removeIntro = addIntro({
+          el: document.getElementById('click'),
+          desc: 'please click the button',
+          realClick: true,
+          hint: true,
+        })
+      });
+        document.getElementById('click').addEventListener('click', function () {
+          alert('click me!');
+          if(typeof removeIntro == 'function') {
+            removeIntro();
+          }
+        })
+    </script>
+</body>
+</html>
