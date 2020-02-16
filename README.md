@@ -3,7 +3,7 @@ Step-by-Step operation Guide.
 
 [Example](./example/index.html)
 
-![Example](https://avatars2.githubusercontent.com/u/3265208?v=3&s=100 "GitHub,Social Coding")
+![Example](./doc/example.gif)
 
 
 ## Install
