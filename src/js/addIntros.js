@@ -1,12 +1,12 @@
-import addIntro from './addIntroMask';
-import clearIntroMask from './clearIntroMask';
+import addIntro from './addIntro';
+import clearIntroMask from './removeAllIntro';
 
 /**
  * 创建一组引导
  * @param intros {ref, desc}
  */
 
-function addIntroArr(intros = []) {
+function addIntros(intros = []) {
   if (Array.isArray(intros) && intros.length > 0) {
     let stepIndex = 1;
     let clearItem = null;
@@ -42,4 +42,4 @@ function addIntroArr(intros = []) {
   }
 }
 
-export default addIntroArr;
+export default addIntros;

@@ -1,5 +1,5 @@
 // 添加一个MaskInto
-import clearAll from './clearIntroMask';
+import clearAll from './removeAllIntro';
 import ClickIcon from '../assets/img/btn_click.png';
 import ArrowIcon from '../assets/img/icon_arrow.png';
 
@@ -27,7 +27,7 @@ function getElementTop(element) {
   return actualTop;
 }
 
-function addIntroMask(el) {
+function addIntro(el) {
   const paddingLeft = 10;
   const paddingTop = 5;
   // 获取对应元素的位置参数
@@ -90,10 +90,10 @@ function addIntroMask(el) {
  * @returns {function(...[*]=)}
  */
 function addIntro({
-  el,
-  desc,
-  realClick= true,
-  hint = true,
+  el,  // defined target element
+  desc,  // description
+  realClick= true,  // Whether the target element can be clicked
+  hint = true,  // Show Animation
 }) {
   clearAll(el);
   const paddingLeft = 10;
@@ -132,7 +132,7 @@ function addIntro({
   if (hint) {
     document.body.appendChild(domClickButton);
   }
-  addIntroMask(el);
+  addIntro(el);
   // 移除多余的dom
   return () => {
     clearAll(el);
