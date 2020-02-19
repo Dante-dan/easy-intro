@@ -56,6 +56,7 @@ removeAllIntro();
 ```
 
 ## API
+
 |    API          | param      | return   | description                                                                                      |
 | ----------      | ---------- | ------   | ------------------------------------------------------------------------------------------------ |
 | addIntro        | introObj   | function | add an introduction for a defined element , **the return function can be used for remove intro** |
