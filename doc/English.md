@@ -1,9 +1,9 @@
 # easy-intro
 Step-by-Step operation Guide.
 
-[Example](./example/index.html)
+[Example](../example/index.html)
 
-![Example](./doc/example.gif)
+![Example](./example.gif)
 
 
 ## Install
